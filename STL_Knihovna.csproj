@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RollForward>Major</RollForward>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>STL_Knihovna</AssemblyName>
+    <RootNamespace>StlKnihovna</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <EnableDefaultContentItems>false</EnableDefaultContentItems>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <Product>STL Knihovna</Product>
+    <Company>STL Knihovna</Company>
+    <Description>STL Knihovna – lokální průzkumník 3D modelů</Description>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
+
+  <!-- Číslo sestavení: z build.txt (zvyšuje ho publish.bat) nebo z -p:BuildNumber=N -->
+  <PropertyGroup>
+    <BuildNumber Condition="'$(BuildNumber)' == '' And Exists('$(MSBuildProjectDirectory)\build.txt')">$([System.IO.File]::ReadAllText('$(MSBuildProjectDirectory)\build.txt').Trim())</BuildNumber>
+    <BuildNumber Condition="'$(BuildNumber)' == ''">0</BuildNumber>
+    <Version>1.0.$(BuildNumber)</Version>
+    <AssemblyVersion>1.0.$(BuildNumber).0</AssemblyVersion>
+    <FileVersion>1.0.$(BuildNumber).0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
+      <_Parameter1>BuildDate</_Parameter1>
+      <_Parameter2>$([System.DateTime]::Now.ToString("yyyy-MM-dd HH:mm"))</_Parameter2>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\**" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="config.json" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="app.ico" />
+  </ItemGroup>
+
+</Project>

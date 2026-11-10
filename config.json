@@ -1,0 +1,51 @@
+{
+  "root": "D:\\Programy\\3D Print",
+  "port": 5173,
+  "openBrowser": true,
+  "slicer": "",
+  "bed": [
+    256,
+    256,
+    256
+  ],
+  "ignore": [],
+  "collections": [
+    "3DTisk/MIX"
+  ],
+  "downloadedFolders": [
+    "3DTisk"
+  ],
+  "autoTags": {
+    "ESP32": [
+      "esp32"
+    ],
+    "Arduino": [
+      "arduino"
+    ],
+    "Raspberry Pi": [
+      "raspberry"
+    ],
+    "PS5": [
+      "ps5",
+      "playstation",
+      "dualsense"
+    ],
+    "Krabičky": [
+      "box",
+      "case",
+      "krabic",
+      "kryt"
+    ],
+    "Držáky": [
+      "holder",
+      "stand",
+      "drzak",
+      "halter",
+      "stojan",
+      "clip"
+    ]
+  },
+  "recentRoots": [
+    "D:\\Programy\\3D Print"
+  ]
+}
