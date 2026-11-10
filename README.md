@@ -1,5 +1,11 @@
 # STL Knihovna
 
+![Návrh – přehled projektů](docs/navrh-prehled.png)
+
+![Návrh – detail projektu](docs/navrh-detail.png)
+
+_Obrázky ukazují grafický návrh aplikace._
+
 Lokální „MakerWorld“ pro tvoje STL: přehledná mřížka všech projektů ze složky `D:\Programy\3D Print\`, 3D náhled, vyhledávání, štítky, oblíbené a stav tisku.
 
 ## Spuštění
